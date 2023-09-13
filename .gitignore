@@ -7,6 +7,6 @@ Host/.qtc_clangd
 Host/.vscode
 Host/build
 Host/install
-# Host/log
+Host/log
 Host/MosqiBot.workspace
 Host/MosqiBot.workspace.user
