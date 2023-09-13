@@ -1,0 +1,5 @@
+v4l2_camera:
+  ros__parameters:
+    # pixel_format: MJPG
+    # image_size: [1280, 1024]
+    image_size: [1600, 1200]

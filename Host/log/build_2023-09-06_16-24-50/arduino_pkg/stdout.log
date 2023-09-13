@@ -1,0 +1,39 @@
+running egg_info
+creating ../../build/arduino_pkg/arduino_pkg.egg-info
+writing ../../build/arduino_pkg/arduino_pkg.egg-info/PKG-INFO
+writing dependency_links to ../../build/arduino_pkg/arduino_pkg.egg-info/dependency_links.txt
+writing entry points to ../../build/arduino_pkg/arduino_pkg.egg-info/entry_points.txt
+writing requirements to ../../build/arduino_pkg/arduino_pkg.egg-info/requires.txt
+writing top-level names to ../../build/arduino_pkg/arduino_pkg.egg-info/top_level.txt
+writing manifest file '../../build/arduino_pkg/arduino_pkg.egg-info/SOURCES.txt'
+reading manifest file '../../build/arduino_pkg/arduino_pkg.egg-info/SOURCES.txt'
+writing manifest file '../../build/arduino_pkg/arduino_pkg.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/avent/Public/MyProjects/MosqiBot/Host/build/arduino_pkg/build
+creating /home/avent/Public/MyProjects/MosqiBot/Host/build/arduino_pkg/build/lib
+creating /home/avent/Public/MyProjects/MosqiBot/Host/build/arduino_pkg/build/lib/arduino_pkg
+copying arduino_pkg/uno_node.py -> /home/avent/Public/MyProjects/MosqiBot/Host/build/arduino_pkg/build/lib/arduino_pkg
+copying arduino_pkg/mega_node.py -> /home/avent/Public/MyProjects/MosqiBot/Host/build/arduino_pkg/build/lib/arduino_pkg
+copying arduino_pkg/__init__.py -> /home/avent/Public/MyProjects/MosqiBot/Host/build/arduino_pkg/build/lib/arduino_pkg
+running install
+running install_lib
+creating /home/avent/Public/MyProjects/MosqiBot/Host/install/arduino_pkg/lib/python3.10/site-packages/arduino_pkg
+copying /home/avent/Public/MyProjects/MosqiBot/Host/build/arduino_pkg/build/lib/arduino_pkg/uno_node.py -> /home/avent/Public/MyProjects/MosqiBot/Host/install/arduino_pkg/lib/python3.10/site-packages/arduino_pkg
+copying /home/avent/Public/MyProjects/MosqiBot/Host/build/arduino_pkg/build/lib/arduino_pkg/mega_node.py -> /home/avent/Public/MyProjects/MosqiBot/Host/install/arduino_pkg/lib/python3.10/site-packages/arduino_pkg
+copying /home/avent/Public/MyProjects/MosqiBot/Host/build/arduino_pkg/build/lib/arduino_pkg/__init__.py -> /home/avent/Public/MyProjects/MosqiBot/Host/install/arduino_pkg/lib/python3.10/site-packages/arduino_pkg
+byte-compiling /home/avent/Public/MyProjects/MosqiBot/Host/install/arduino_pkg/lib/python3.10/site-packages/arduino_pkg/uno_node.py to uno_node.cpython-310.pyc
+byte-compiling /home/avent/Public/MyProjects/MosqiBot/Host/install/arduino_pkg/lib/python3.10/site-packages/arduino_pkg/mega_node.py to mega_node.cpython-310.pyc
+byte-compiling /home/avent/Public/MyProjects/MosqiBot/Host/install/arduino_pkg/lib/python3.10/site-packages/arduino_pkg/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/avent/Public/MyProjects/MosqiBot/Host/install/arduino_pkg/share/ament_index
+creating /home/avent/Public/MyProjects/MosqiBot/Host/install/arduino_pkg/share/ament_index/resource_index
+creating /home/avent/Public/MyProjects/MosqiBot/Host/install/arduino_pkg/share/ament_index/resource_index/packages
+copying resource/arduino_pkg -> /home/avent/Public/MyProjects/MosqiBot/Host/install/arduino_pkg/share/ament_index/resource_index/packages
+copying package.xml -> /home/avent/Public/MyProjects/MosqiBot/Host/install/arduino_pkg/share/arduino_pkg
+running install_egg_info
+Copying ../../build/arduino_pkg/arduino_pkg.egg-info to /home/avent/Public/MyProjects/MosqiBot/Host/install/arduino_pkg/lib/python3.10/site-packages/arduino_pkg-0.0.0-py3.10.egg-info
+running install_scripts
+Installing mega_node script to /home/avent/Public/MyProjects/MosqiBot/Host/install/arduino_pkg/lib/arduino_pkg
+Installing uno_node script to /home/avent/Public/MyProjects/MosqiBot/Host/install/arduino_pkg/lib/arduino_pkg
+writing list of installed files to '/home/avent/Public/MyProjects/MosqiBot/Host/build/arduino_pkg/install.log'

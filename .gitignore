@@ -1,0 +1,12 @@
+ROS2/.vscode
+ROS2/build
+ROS2/install
+ROS2/log
+
+Host/.qtc_clangd
+Host/.vscode
+Host/build
+Host/install
+Host/build
+Host/MosqiBot.workspace
+Host/MosqiBot.workspace.user

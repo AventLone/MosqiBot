@@ -1,0 +1,15 @@
+In file included from /home/avent/Public/MyProjects/MosqiBot/Host/src/mosqibot/lib/Projector.cpp:1:
+/home/avent/Public/MyProjects/MosqiBot/Host/src/mosqibot/lib/Projector.h: In constructor ‘Projector::Projector(const string&, const Point2f&, float)’:
+/home/avent/Public/MyProjects/MosqiBot/Host/src/mosqibot/lib/Projector.h:45:23: warning: ‘Projector::tvec_’ will be initialized after [-Wreorder]
+   45 |     const cv::Point2f tvec_;                             // translation vector
+      |                       ^~~~~
+/home/avent/Public/MyProjects/MosqiBot/Host/src/mosqibot/lib/Projector.h:44:17: warning:   ‘const float Projector::depth_’ [-Wreorder]
+   44 |     const float depth_;                                  // depth
+      |                 ^~~~~~
+/home/avent/Public/MyProjects/MosqiBot/Host/src/mosqibot/lib/Projector.cpp:4:1: warning:   when initialized here [-Wreorder]
+    4 | Projector::Projector(const std::string& camera_info_path, const cv::Point2f& tvec, float depth)
+      | ^~~~~~~~~
+/home/avent/Public/MyProjects/MosqiBot/Host/src/mosqibot/lib/Projector.cpp: In member function ‘void Projector::detect(const cv::Mat&, cv::Mat&) const’:
+/home/avent/Public/MyProjects/MosqiBot/Host/src/mosqibot/lib/Projector.cpp:140:13: warning: unused variable ‘area’ [-Wunused-variable]
+  140 |         int area = stats.at<int>(i, cv::CC_STAT_AREA);
+      |             ^~~~

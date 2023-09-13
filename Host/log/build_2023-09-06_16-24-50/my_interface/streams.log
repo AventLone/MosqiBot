@@ -1,0 +1,264 @@
+[0.007s] Invoking command in '/home/avent/Public/MyProjects/MosqiBot/Host/build/my_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/avent/Public/MyProjects/MosqiBot/Host/install/arduino_pkg:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/arduino_pkg:/opt/ros/humble /usr/bin/cmake /home/avent/Public/MyProjects/MosqiBot/Host/src/my_interface -G CodeBlocks - Unix Makefiles -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface
+[0.051s] -- The C compiler identification is GNU 11.4.0
+[0.087s] -- The CXX compiler identification is GNU 11.4.0
+[0.111s] -- Detecting C compiler ABI info
+[0.151s] -- Detecting C compiler ABI info - done
+[0.155s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.155s] -- Detecting C compile features
+[0.156s] -- Detecting C compile features - done
+[0.157s] -- Detecting CXX compiler ABI info
+[0.203s] -- Detecting CXX compiler ABI info - done
+[0.208s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.208s] -- Detecting CXX compile features
+[0.208s] -- Detecting CXX compile features - done
+[0.210s] -- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.311s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[0.360s] -- Found std_msgs: 4.2.3 (/opt/ros/humble/share/std_msgs/cmake)
+[0.381s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.384s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.389s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.397s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.408s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.441s] -- Found rosidl_default_generators: 1.2.0 (/opt/ros/humble/share/rosidl_default_generators/cmake)
+[0.609s] -- Found ament_cmake_ros: 0.10.0 (/opt/ros/humble/share/ament_cmake_ros/cmake)
+[0.826s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.914s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.929s] -- Found PythonInterp: /usr/bin/python3 (found suitable version "3.10.12", minimum required is "3.6") 
+[0.930s] -- Found python_cmake_module: 0.10.0 (/opt/ros/humble/share/python_cmake_module/cmake)
+[0.945s] -- Found PythonLibs: /usr/lib/x86_64-linux-gnu/libpython3.10.so (found suitable version "3.10.12", minimum required is "3.5") 
+[0.945s] -- Using PYTHON_EXECUTABLE: /usr/bin/python3
+[0.945s] -- Using PYTHON_INCLUDE_DIRS: /usr/include/python3.10
+[0.945s] -- Using PYTHON_LIBRARIES: /usr/lib/x86_64-linux-gnu/libpython3.10.so
+[0.958s] -- Found PythonExtra: .so  
+[0.992s] -- Found ament_lint_auto: 0.12.7 (/opt/ros/humble/share/ament_lint_auto/cmake)
+[1.001s] -- Added test 'lint_cmake' to check CMake code style
+[1.002s] -- Added test 'xmllint' to check XML markup files
+[1.003s] -- Configuring done
+[1.034s] -- Generating done
+[1.035s] -- Build files have been written to: /home/avent/Public/MyProjects/MosqiBot/Host/build/my_interface
+[1.040s] Invoked command in '/home/avent/Public/MyProjects/MosqiBot/Host/build/my_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/avent/Public/MyProjects/MosqiBot/Host/install/arduino_pkg:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/arduino_pkg:/opt/ros/humble /usr/bin/cmake /home/avent/Public/MyProjects/MosqiBot/Host/src/my_interface -G CodeBlocks - Unix Makefiles -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface
+[1.040s] Invoking command in '/home/avent/Public/MyProjects/MosqiBot/Host/build/my_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/avent/Public/MyProjects/MosqiBot/Host/install/arduino_pkg:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/arduino_pkg:/opt/ros/humble /usr/bin/cmake --build /home/avent/Public/MyProjects/MosqiBot/Host/build/my_interface -- -j16 -l16
+[1.062s] [  2%] Generating C code for ROS interfaces
+[1.067s] [  5%] Generating C++ code for ROS interfaces
+[1.072s] [  5%] Built target ament_cmake_python_copy_my_interface
+[1.225s] running egg_info
+[1.225s] creating my_interface.egg-info
+[1.225s] writing my_interface.egg-info/PKG-INFO
+[1.225s] writing dependency_links to my_interface.egg-info/dependency_links.txt
+[1.225s] writing top-level names to my_interface.egg-info/top_level.txt
+[1.225s] writing manifest file 'my_interface.egg-info/SOURCES.txt'
+[1.226s] reading manifest file 'my_interface.egg-info/SOURCES.txt'
+[1.226s] writing manifest file 'my_interface.egg-info/SOURCES.txt'
+[1.241s] [  5%] Built target ament_cmake_python_build_my_interface_egg
+[1.291s] [  5%] Built target my_interface__cpp
+[1.296s] [  7%] Building C object CMakeFiles/my_interface__rosidl_generator_c.dir/rosidl_generator_c/my_interface/srv/detail/mega_msg__functions.c.o
+[1.296s] [ 12%] Building C object CMakeFiles/my_interface__rosidl_generator_c.dir/rosidl_generator_c/my_interface/srv/detail/clean_up__functions.c.o
+[1.296s] [ 12%] Generating C++ type support dispatch for ROS interfaces
+[1.296s] [ 15%] Generating C++ type support for eProsima Fast-RTPS
+[1.297s] [ 17%] Generating C++ introspection for ROS interfaces
+[1.375s] [ 20%] Linking C shared library libmy_interface__rosidl_generator_c.so
+[1.396s] [ 20%] Built target my_interface__rosidl_generator_c
+[1.401s] [ 23%] Generating C type support for eProsima Fast-RTPS
+[1.401s] [ 25%] Generating C introspection for ROS interfaces
+[1.402s] [ 28%] Generating C type support dispatch for ROS interfaces
+[1.485s] [ 33%] Building CXX object CMakeFiles/my_interface__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_interface/srv/mega_msg__type_support.cpp.o
+[1.485s] [ 33%] Building CXX object CMakeFiles/my_interface__rosidl_typesupport_cpp.dir/rosidl_typesupport_cpp/my_interface/srv/clean_up__type_support.cpp.o
+[1.505s] [ 38%] Building CXX object CMakeFiles/my_interface__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/my_interface/srv/detail/clean_up__type_support.cpp.o
+[1.506s] [ 38%] Building CXX object CMakeFiles/my_interface__rosidl_typesupport_introspection_cpp.dir/rosidl_typesupport_introspection_cpp/my_interface/srv/detail/mega_msg__type_support.cpp.o
+[1.523s] [ 41%] Building CXX object CMakeFiles/my_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/my_interface/srv/detail/dds_fastrtps/mega_msg__type_support.cpp.o
+[1.525s] [ 43%] Building CXX object CMakeFiles/my_interface__rosidl_typesupport_fastrtps_cpp.dir/rosidl_typesupport_fastrtps_cpp/my_interface/srv/detail/dds_fastrtps/clean_up__type_support.cpp.o
+[1.601s] [ 48%] Building CXX object CMakeFiles/my_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/my_interface/srv/clean_up__type_support.cpp.o
+[1.601s] [ 48%] Building CXX object CMakeFiles/my_interface__rosidl_typesupport_c.dir/rosidl_typesupport_c/my_interface/srv/mega_msg__type_support.cpp.o
+[1.633s] [ 51%] Building C object CMakeFiles/my_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_interface/srv/detail/mega_msg__type_support.c.o
+[1.634s] [ 53%] Linking CXX shared library libmy_interface__rosidl_typesupport_c.so
+[1.635s] [ 56%] Building C object CMakeFiles/my_interface__rosidl_typesupport_introspection_c.dir/rosidl_typesupport_introspection_c/my_interface/srv/detail/clean_up__type_support.c.o
+[1.640s] [ 58%] Building CXX object CMakeFiles/my_interface__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/my_interface/srv/detail/clean_up__type_support_c.cpp.o
+[1.641s] [ 61%] Building CXX object CMakeFiles/my_interface__rosidl_typesupport_fastrtps_c.dir/rosidl_typesupport_fastrtps_c/my_interface/srv/detail/mega_msg__type_support_c.cpp.o
+[1.669s] [ 61%] Built target my_interface__rosidl_typesupport_c
+[1.674s] [ 64%] Linking C shared library libmy_interface__rosidl_typesupport_introspection_c.so
+[1.695s] [ 64%] Built target my_interface__rosidl_typesupport_introspection_c
+[1.746s] [ 66%] Linking CXX shared library libmy_interface__rosidl_typesupport_cpp.so
+[1.773s] [ 66%] Built target my_interface__rosidl_typesupport_cpp
+[1.779s] [ 69%] Linking CXX shared library libmy_interface__rosidl_typesupport_introspection_cpp.so
+[1.805s] [ 69%] Built target my_interface__rosidl_typesupport_introspection_cpp
+[1.880s] [ 71%] Linking CXX shared library libmy_interface__rosidl_typesupport_fastrtps_c.so
+[1.880s] [ 74%] Linking CXX shared library libmy_interface__rosidl_typesupport_fastrtps_cpp.so
+[1.925s] [ 74%] Built target my_interface__rosidl_typesupport_fastrtps_c
+[1.925s] [ 74%] Built target my_interface__rosidl_typesupport_fastrtps_cpp
+[1.936s] [ 74%] Built target my_interface
+[1.947s] [ 76%] Generating Python code for ROS interfaces
+[2.279s] [ 76%] Built target my_interface__py
+[2.290s] [ 79%] Building C object CMakeFiles/my_interface__rosidl_generator_py.dir/rosidl_generator_py/my_interface/srv/_mega_msg_s.c.o
+[2.290s] [ 82%] Building C object CMakeFiles/my_interface__rosidl_generator_py.dir/rosidl_generator_py/my_interface/srv/_clean_up_s.c.o
+[2.374s] [ 84%] Linking C shared library rosidl_generator_py/my_interface/libmy_interface__rosidl_generator_py.so
+[2.401s] [ 84%] Built target my_interface__rosidl_generator_py
+[2.417s] [ 87%] Building C object CMakeFiles/my_interface__rosidl_typesupport_fastrtps_c__pyext.dir/rosidl_generator_py/my_interface/_my_interface_s.ep.rosidl_typesupport_fastrtps_c.c.o
+[2.418s] [ 89%] Building C object CMakeFiles/my_interface__rosidl_typesupport_introspection_c__pyext.dir/rosidl_generator_py/my_interface/_my_interface_s.ep.rosidl_typesupport_introspection_c.c.o
+[2.418s] [ 92%] Building C object CMakeFiles/my_interface__rosidl_typesupport_c__pyext.dir/rosidl_generator_py/my_interface/_my_interface_s.ep.rosidl_typesupport_c.c.o
+[2.515s] [100%] Linking C shared library rosidl_generator_py/my_interface/my_interface_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[2.515s] [100%] Linking C shared library rosidl_generator_py/my_interface/my_interface_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[2.515s] [100%] Linking C shared library rosidl_generator_py/my_interface/my_interface_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[2.537s] [100%] Built target my_interface__rosidl_typesupport_fastrtps_c__pyext
+[2.537s] [100%] Built target my_interface__rosidl_typesupport_introspection_c__pyext
+[2.537s] [100%] Built target my_interface__rosidl_typesupport_c__pyext
+[2.544s] Invoked command in '/home/avent/Public/MyProjects/MosqiBot/Host/build/my_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/avent/Public/MyProjects/MosqiBot/Host/install/arduino_pkg:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/arduino_pkg:/opt/ros/humble /usr/bin/cmake --build /home/avent/Public/MyProjects/MosqiBot/Host/build/my_interface -- -j16 -l16
+[2.658s] Invoking command in '/home/avent/Public/MyProjects/MosqiBot/Host/build/my_interface': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/avent/Public/MyProjects/MosqiBot/Host/install/arduino_pkg:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/arduino_pkg:/opt/ros/humble /usr/bin/cmake --install /home/avent/Public/MyProjects/MosqiBot/Host/build/my_interface
+[2.669s] -- Install configuration: "Release"
+[2.669s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/ament_index/resource_index/rosidl_interfaces/my_interface
+[2.670s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface
+[2.670s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/msg
+[2.670s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/msg/rosidl_generator_c__visibility_control.h
+[2.670s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/srv
+[2.670s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/srv/clean_up.h
+[2.671s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/srv/detail
+[2.671s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/srv/detail/clean_up__functions.h
+[2.671s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/srv/detail/mega_msg__functions.h
+[2.671s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/srv/detail/clean_up__type_support.h
+[2.671s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/srv/detail/clean_up__functions.c
+[2.671s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/srv/detail/mega_msg__type_support.h
+[2.671s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/srv/detail/mega_msg__functions.c
+[2.671s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/srv/detail/mega_msg__struct.h
+[2.671s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/srv/detail/clean_up__struct.h
+[2.672s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/srv/mega_msg.h
+[2.672s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/environment/library_path.sh
+[2.672s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/environment/library_path.dsv
+[2.672s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/lib/libmy_interface__rosidl_generator_c.so
+[2.672s] -- Set runtime path of "/home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/lib/libmy_interface__rosidl_generator_c.so" to ""
+[2.672s] -- Up-to-date: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface
+[2.672s] -- Up-to-date: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/msg
+[2.672s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/msg/rosidl_typesupport_fastrtps_c__visibility_control.h
+[2.673s] -- Up-to-date: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/srv
+[2.673s] -- Up-to-date: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/srv/detail
+[2.673s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/srv/detail/mega_msg__rosidl_typesupport_fastrtps_c.h
+[2.673s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/srv/detail/clean_up__rosidl_typesupport_fastrtps_c.h
+[2.673s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/lib/libmy_interface__rosidl_typesupport_fastrtps_c.so
+[2.673s] -- Set runtime path of "/home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/lib/libmy_interface__rosidl_typesupport_fastrtps_c.so" to ""
+[2.674s] -- Up-to-date: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface
+[2.674s] -- Up-to-date: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/srv
+[2.674s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/srv/mega_msg.hpp
+[2.674s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/srv/clean_up.hpp
+[2.674s] -- Up-to-date: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/srv/detail
+[2.674s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/srv/detail/clean_up__traits.hpp
+[2.674s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/srv/detail/mega_msg__struct.hpp
+[2.675s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/srv/detail/mega_msg__traits.hpp
+[2.675s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/srv/detail/clean_up__builder.hpp
+[2.675s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/srv/detail/mega_msg__builder.hpp
+[2.675s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/srv/detail/clean_up__struct.hpp
+[2.675s] -- Up-to-date: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface
+[2.675s] -- Up-to-date: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/msg
+[2.675s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/msg/rosidl_typesupport_fastrtps_cpp__visibility_control.h
+[2.675s] -- Up-to-date: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/srv
+[2.675s] -- Up-to-date: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/srv/detail
+[2.675s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/srv/detail/dds_fastrtps
+[2.675s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/srv/detail/clean_up__rosidl_typesupport_fastrtps_cpp.hpp
+[2.675s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/srv/detail/mega_msg__rosidl_typesupport_fastrtps_cpp.hpp
+[2.675s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/lib/libmy_interface__rosidl_typesupport_fastrtps_cpp.so
+[2.675s] -- Set runtime path of "/home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/lib/libmy_interface__rosidl_typesupport_fastrtps_cpp.so" to ""
+[2.675s] -- Up-to-date: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface
+[2.675s] -- Up-to-date: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/msg
+[2.675s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/msg/rosidl_typesupport_introspection_c__visibility_control.h
+[2.675s] -- Up-to-date: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/srv
+[2.675s] -- Up-to-date: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/srv/detail
+[2.675s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/srv/detail/clean_up__rosidl_typesupport_introspection_c.h
+[2.675s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/srv/detail/clean_up__type_support.c
+[2.676s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/srv/detail/mega_msg__rosidl_typesupport_introspection_c.h
+[2.676s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/srv/detail/mega_msg__type_support.c
+[2.676s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/lib/libmy_interface__rosidl_typesupport_introspection_c.so
+[2.676s] -- Set runtime path of "/home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/lib/libmy_interface__rosidl_typesupport_introspection_c.so" to ""
+[2.676s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/lib/libmy_interface__rosidl_typesupport_c.so
+[2.676s] -- Set runtime path of "/home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/lib/libmy_interface__rosidl_typesupport_c.so" to ""
+[2.676s] -- Up-to-date: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface
+[2.676s] -- Up-to-date: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/srv
+[2.676s] -- Up-to-date: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/srv/detail
+[2.676s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/srv/detail/clean_up__rosidl_typesupport_introspection_cpp.hpp
+[2.676s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/srv/detail/clean_up__type_support.cpp
+[2.676s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/srv/detail/mega_msg__rosidl_typesupport_introspection_cpp.hpp
+[2.676s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/include/my_interface/my_interface/srv/detail/mega_msg__type_support.cpp
+[2.676s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/lib/libmy_interface__rosidl_typesupport_introspection_cpp.so
+[2.676s] -- Set runtime path of "/home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/lib/libmy_interface__rosidl_typesupport_introspection_cpp.so" to ""
+[2.676s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/lib/libmy_interface__rosidl_typesupport_cpp.so
+[2.676s] -- Set runtime path of "/home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/lib/libmy_interface__rosidl_typesupport_cpp.so" to ""
+[2.676s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/environment/pythonpath.sh
+[2.676s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/environment/pythonpath.dsv
+[2.676s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/local/lib/python3.10/dist-packages/my_interface-0.0.0-py3.10.egg-info
+[2.676s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/local/lib/python3.10/dist-packages/my_interface-0.0.0-py3.10.egg-info/top_level.txt
+[2.676s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/local/lib/python3.10/dist-packages/my_interface-0.0.0-py3.10.egg-info/SOURCES.txt
+[2.676s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/local/lib/python3.10/dist-packages/my_interface-0.0.0-py3.10.egg-info/PKG-INFO
+[2.676s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/local/lib/python3.10/dist-packages/my_interface-0.0.0-py3.10.egg-info/dependency_links.txt
+[2.676s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/local/lib/python3.10/dist-packages/my_interface
+[2.677s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/local/lib/python3.10/dist-packages/my_interface/_my_interface_s.ep.rosidl_typesupport_c.c
+[2.677s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/local/lib/python3.10/dist-packages/my_interface/my_interface_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[2.677s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/local/lib/python3.10/dist-packages/my_interface/my_interface_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[2.677s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/local/lib/python3.10/dist-packages/my_interface/libmy_interface__rosidl_generator_py.so
+[2.677s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/local/lib/python3.10/dist-packages/my_interface/_my_interface_s.ep.rosidl_typesupport_fastrtps_c.c
+[2.677s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/local/lib/python3.10/dist-packages/my_interface/my_interface_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[2.677s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/local/lib/python3.10/dist-packages/my_interface/_my_interface_s.ep.rosidl_typesupport_introspection_c.c
+[2.677s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/local/lib/python3.10/dist-packages/my_interface/__init__.py
+[2.677s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/local/lib/python3.10/dist-packages/my_interface/srv
+[2.677s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/local/lib/python3.10/dist-packages/my_interface/srv/_mega_msg.py
+[2.677s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/local/lib/python3.10/dist-packages/my_interface/srv/_mega_msg_s.c
+[2.677s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/local/lib/python3.10/dist-packages/my_interface/srv/_clean_up.py
+[2.677s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/local/lib/python3.10/dist-packages/my_interface/srv/_clean_up_s.c
+[2.677s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/local/lib/python3.10/dist-packages/my_interface/srv/__init__.py
+[2.698s] Listing '/home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/local/lib/python3.10/dist-packages/my_interface'...
+[2.699s] Compiling '/home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/local/lib/python3.10/dist-packages/my_interface/__init__.py'...
+[2.699s] Listing '/home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/local/lib/python3.10/dist-packages/my_interface/srv'...
+[2.699s] Compiling '/home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/local/lib/python3.10/dist-packages/my_interface/srv/__init__.py'...
+[2.699s] Compiling '/home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/local/lib/python3.10/dist-packages/my_interface/srv/_clean_up.py'...
+[2.699s] Compiling '/home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/local/lib/python3.10/dist-packages/my_interface/srv/_mega_msg.py'...
+[2.701s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/local/lib/python3.10/dist-packages/my_interface/my_interface_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so
+[2.701s] -- Set runtime path of "/home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/local/lib/python3.10/dist-packages/my_interface/my_interface_s__rosidl_typesupport_fastrtps_c.cpython-310-x86_64-linux-gnu.so" to ""
+[2.701s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/local/lib/python3.10/dist-packages/my_interface/my_interface_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so
+[2.701s] -- Set runtime path of "/home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/local/lib/python3.10/dist-packages/my_interface/my_interface_s__rosidl_typesupport_introspection_c.cpython-310-x86_64-linux-gnu.so" to ""
+[2.701s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/local/lib/python3.10/dist-packages/my_interface/my_interface_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so
+[2.701s] -- Set runtime path of "/home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/local/lib/python3.10/dist-packages/my_interface/my_interface_s__rosidl_typesupport_c.cpython-310-x86_64-linux-gnu.so" to ""
+[2.702s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/lib/libmy_interface__rosidl_generator_py.so
+[2.702s] -- Set runtime path of "/home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/lib/libmy_interface__rosidl_generator_py.so" to ""
+[2.702s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/srv/MegaMsg.idl
+[2.702s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/srv/CleanUp.idl
+[2.702s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/srv/MegaMsg.srv
+[2.702s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/srv/MegaMsg_Request.msg
+[2.702s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/srv/MegaMsg_Response.msg
+[2.702s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/srv/CleanUp.srv
+[2.702s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/srv/CleanUp_Request.msg
+[2.702s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/srv/CleanUp_Response.msg
+[2.702s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/ament_index/resource_index/package_run_dependencies/my_interface
+[2.702s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/ament_index/resource_index/parent_prefix_path/my_interface
+[2.702s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/environment/ament_prefix_path.sh
+[2.702s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/environment/ament_prefix_path.dsv
+[2.702s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/environment/path.sh
+[2.702s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/environment/path.dsv
+[2.703s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/local_setup.bash
+[2.703s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/local_setup.sh
+[2.703s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/local_setup.zsh
+[2.703s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/local_setup.dsv
+[2.703s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/package.dsv
+[2.703s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/ament_index/resource_index/packages/my_interface
+[2.703s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/cmake/export_my_interface__rosidl_generator_cExport.cmake
+[2.703s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/cmake/export_my_interface__rosidl_generator_cExport-release.cmake
+[2.703s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/cmake/export_my_interface__rosidl_typesupport_fastrtps_cExport.cmake
+[2.703s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/cmake/export_my_interface__rosidl_typesupport_fastrtps_cExport-release.cmake
+[2.703s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/cmake/export_my_interface__rosidl_generator_cppExport.cmake
+[2.703s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/cmake/export_my_interface__rosidl_typesupport_fastrtps_cppExport.cmake
+[2.703s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/cmake/export_my_interface__rosidl_typesupport_fastrtps_cppExport-release.cmake
+[2.703s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/cmake/my_interface__rosidl_typesupport_introspection_cExport.cmake
+[2.703s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/cmake/my_interface__rosidl_typesupport_introspection_cExport-release.cmake
+[2.703s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/cmake/my_interface__rosidl_typesupport_cExport.cmake
+[2.703s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/cmake/my_interface__rosidl_typesupport_cExport-release.cmake
+[2.704s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/cmake/my_interface__rosidl_typesupport_introspection_cppExport.cmake
+[2.704s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/cmake/my_interface__rosidl_typesupport_introspection_cppExport-release.cmake
+[2.704s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/cmake/my_interface__rosidl_typesupport_cppExport.cmake
+[2.704s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/cmake/my_interface__rosidl_typesupport_cppExport-release.cmake
+[2.704s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/cmake/export_my_interface__rosidl_generator_pyExport.cmake
+[2.704s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/cmake/export_my_interface__rosidl_generator_pyExport-release.cmake
+[2.704s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/cmake/rosidl_cmake-extras.cmake
+[2.704s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/cmake/ament_cmake_export_dependencies-extras.cmake
+[2.704s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/cmake/ament_cmake_export_include_directories-extras.cmake
+[2.704s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/cmake/ament_cmake_export_libraries-extras.cmake
+[2.704s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/cmake/ament_cmake_export_targets-extras.cmake
+[2.704s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/cmake/rosidl_cmake_export_typesupport_targets-extras.cmake
+[2.704s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/cmake/rosidl_cmake_export_typesupport_libraries-extras.cmake
+[2.704s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/cmake/my_interfaceConfig.cmake
+[2.704s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/cmake/my_interfaceConfig-version.cmake
+[2.704s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/package.xml
+[2.706s] Invoked command in '/home/avent/Public/MyProjects/MosqiBot/Host/build/my_interface' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/home/avent/Public/MyProjects/MosqiBot/Host/install/arduino_pkg:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/arduino_pkg:/opt/ros/humble /usr/bin/cmake --install /home/avent/Public/MyProjects/MosqiBot/Host/build/my_interface

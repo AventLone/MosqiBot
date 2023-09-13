@@ -1,0 +1,7 @@
+{
+    "configuration": "cpu=atmega2560",
+    "board": "arduino:avr:mega",
+    "programmer": "avrispmkii",
+    "sketch": "Mega_v2.0.ino",
+    "port": "/dev/ttyUSB0"
+}

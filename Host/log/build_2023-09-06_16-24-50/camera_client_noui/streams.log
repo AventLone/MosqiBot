@@ -1,0 +1,88 @@
+[0.176s] Invoking command in '/home/avent/Public/MyProjects/MosqiBot/Host/build/camera_client_noui': CMAKE_PREFIX_PATH=/home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface:/home/avent/Public/MyProjects/MosqiBot/Host/install/qt_ui_test:/home/avent/Public/MyProjects/MosqiBot/Host/install/qt_ui:/home/avent/Public/MyProjects/MosqiBot/Host/install/camera_client:/home/avent/Public/MyProjects/MosqiBot/Host/install/camera_client_noui:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/qt_ui_test:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/camera_client_noui:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/camera_client:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/my_interface:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/qtui:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/qt_ui:/home/avent/Public/MyProjects/MosqiBot/Host/install/arduino_pkg:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/arduino_pkg:/opt/ros/humble /usr/bin/cmake /home/avent/Public/MyProjects/MosqiBot/Host/src/camera_client_noui -G CodeBlocks - Unix Makefiles -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/home/avent/Public/MyProjects/MosqiBot/Host/install/camera_client_noui
+[0.209s] -- The C compiler identification is GNU 11.4.0
+[0.243s] -- The CXX compiler identification is GNU 11.4.0
+[0.268s] -- Detecting C compiler ABI info
+[0.311s] -- Detecting C compiler ABI info - done
+[0.315s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.315s] -- Detecting C compile features
+[0.315s] -- Detecting C compile features - done
+[0.317s] -- Detecting CXX compiler ABI info
+[0.366s] -- Detecting CXX compiler ABI info - done
+[0.374s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.374s] -- Detecting CXX compile features
+[0.375s] -- Detecting CXX compile features - done
+[0.378s] -- Found ament_cmake: 1.3.5 (/opt/ros/humble/share/ament_cmake/cmake)
+[0.491s] -- Found Python3: /usr/bin/python3.10 (found version "3.10.12") found components: Interpreter 
+[0.552s] -- Found rclcpp: 16.0.5 (/opt/ros/humble/share/rclcpp/cmake)
+[0.590s] -- Found rosidl_generator_c: 3.1.5 (/opt/ros/humble/share/rosidl_generator_c/cmake)
+[0.593s] -- Found rosidl_adapter: 3.1.5 (/opt/ros/humble/share/rosidl_adapter/cmake)
+[0.599s] -- Found rosidl_generator_cpp: 3.1.5 (/opt/ros/humble/share/rosidl_generator_cpp/cmake)
+[0.614s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.620s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.662s] -- Found rmw_implementation_cmake: 6.1.1 (/opt/ros/humble/share/rmw_implementation_cmake/cmake)
+[0.663s] -- Found rmw_fastrtps_cpp: 6.2.3 (/opt/ros/humble/share/rmw_fastrtps_cpp/cmake)
+[0.722s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.2")  
+[0.739s] -- Found FastRTPS: /opt/ros/humble/include  
+[0.767s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.773s] -- Looking for pthread.h
+[0.816s] -- Looking for pthread.h - found
+[0.816s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD
+[0.859s] -- Performing Test CMAKE_HAVE_LIBC_PTHREAD - Success
+[0.860s] -- Found Threads: TRUE  
+[0.978s] -- Found my_interface: 0.0.0 (/home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface/share/my_interface/cmake)
+[1.006s] -- Found OpenCV: /usr (found version "4.5.4") 
+[1.007s] -- Found cv_bridge: 3.2.1 (/opt/ros/humble/share/cv_bridge/cmake)
+[1.130s] -- Configuring done
+[1.145s] -- Generating done
+[1.146s] -- Build files have been written to: /home/avent/Public/MyProjects/MosqiBot/Host/build/camera_client_noui
+[1.154s] Invoked command in '/home/avent/Public/MyProjects/MosqiBot/Host/build/camera_client_noui' returned '0': CMAKE_PREFIX_PATH=/home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface:/home/avent/Public/MyProjects/MosqiBot/Host/install/qt_ui_test:/home/avent/Public/MyProjects/MosqiBot/Host/install/qt_ui:/home/avent/Public/MyProjects/MosqiBot/Host/install/camera_client:/home/avent/Public/MyProjects/MosqiBot/Host/install/camera_client_noui:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/qt_ui_test:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/camera_client_noui:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/camera_client:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/my_interface:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/qtui:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/qt_ui:/home/avent/Public/MyProjects/MosqiBot/Host/install/arduino_pkg:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/arduino_pkg:/opt/ros/humble /usr/bin/cmake /home/avent/Public/MyProjects/MosqiBot/Host/src/camera_client_noui -G CodeBlocks - Unix Makefiles -DCMAKE_BUILD_TYPE=Release -DCMAKE_INSTALL_PREFIX=/home/avent/Public/MyProjects/MosqiBot/Host/install/camera_client_noui
+[1.154s] Invoking command in '/home/avent/Public/MyProjects/MosqiBot/Host/build/camera_client_noui': CMAKE_PREFIX_PATH=/home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface:/home/avent/Public/MyProjects/MosqiBot/Host/install/qt_ui_test:/home/avent/Public/MyProjects/MosqiBot/Host/install/qt_ui:/home/avent/Public/MyProjects/MosqiBot/Host/install/camera_client:/home/avent/Public/MyProjects/MosqiBot/Host/install/camera_client_noui:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/qt_ui_test:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/camera_client_noui:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/camera_client:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/my_interface:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/qtui:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/qt_ui:/home/avent/Public/MyProjects/MosqiBot/Host/install/arduino_pkg:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/arduino_pkg:/opt/ros/humble /usr/bin/cmake --build /home/avent/Public/MyProjects/MosqiBot/Host/build/camera_client_noui -- -j16 -l16
+[1.183s] [ 16%] Building CXX object CMakeFiles/camera_client_noui.dir/include/Task.cpp.o
+[1.183s] [ 33%] Building CXX object CMakeFiles/camera_client_noui.dir/src/client_node.cpp.o
+[1.184s] [ 50%] Building CXX object CMakeFiles/camera_client_noui.dir/include/nodes.cpp.o
+[1.184s] [ 66%] Building CXX object CMakeFiles/camera_client_noui.dir/lib/FocusStacking.cpp.o
+[1.184s] [ 83%] Building CXX object CMakeFiles/camera_client_noui.dir/lib/Projector.cpp.o
+[2.372s] In file included from /home/avent/Public/MyProjects/MosqiBot/Host/src/camera_client_noui/lib/Projector.cpp:1:
+[2.372s] /home/avent/Public/MyProjects/MosqiBot/Host/src/camera_client_noui/lib/Projector.h: In constructor ‘Projector::Projector(const string&, const Point2f&, float)’:
+[2.372s] /home/avent/Public/MyProjects/MosqiBot/Host/src/camera_client_noui/lib/Projector.h:45:23: warning: ‘Projector::tvec_’ will be initialized after [-Wreorder]
+[2.372s]    45 |     const cv::Point2f tvec_;                             // translation vector
+[2.372s]       |                       ^~~~~
+[2.372s] /home/avent/Public/MyProjects/MosqiBot/Host/src/camera_client_noui/lib/Projector.h:44:17: warning:   ‘const float Projector::depth_’ [-Wreorder]
+[2.372s]    44 |     const float depth_;                                  // depth
+[2.372s]       |                 ^~~~~~
+[2.372s] /home/avent/Public/MyProjects/MosqiBot/Host/src/camera_client_noui/lib/Projector.cpp:4:1: warning:   when initialized here [-Wreorder]
+[2.372s]     4 | Projector::Projector(const std::string& camera_info_path, const cv::Point2f& tvec, float depth)
+[2.372s]       | ^~~~~~~~~
+[2.394s] /home/avent/Public/MyProjects/MosqiBot/Host/src/camera_client_noui/lib/Projector.cpp: In member function ‘void Projector::detect(const cv::Mat&, cv::Mat&) const’:
+[2.394s] /home/avent/Public/MyProjects/MosqiBot/Host/src/camera_client_noui/lib/Projector.cpp:140:13: warning: unused variable ‘area’ [-Wunused-variable]
+[2.394s]   140 |         int area = stats.at<int>(i, cv::CC_STAT_AREA);
+[2.394s]       |             ^~~~
+[11.195s] [100%] Linking CXX executable camera_client_noui
+[11.431s] [100%] Built target camera_client_noui
+[11.440s] Invoked command in '/home/avent/Public/MyProjects/MosqiBot/Host/build/camera_client_noui' returned '0': CMAKE_PREFIX_PATH=/home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface:/home/avent/Public/MyProjects/MosqiBot/Host/install/qt_ui_test:/home/avent/Public/MyProjects/MosqiBot/Host/install/qt_ui:/home/avent/Public/MyProjects/MosqiBot/Host/install/camera_client:/home/avent/Public/MyProjects/MosqiBot/Host/install/camera_client_noui:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/qt_ui_test:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/camera_client_noui:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/camera_client:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/my_interface:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/qtui:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/qt_ui:/home/avent/Public/MyProjects/MosqiBot/Host/install/arduino_pkg:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/arduino_pkg:/opt/ros/humble /usr/bin/cmake --build /home/avent/Public/MyProjects/MosqiBot/Host/build/camera_client_noui -- -j16 -l16
+[11.461s] Invoking command in '/home/avent/Public/MyProjects/MosqiBot/Host/build/camera_client_noui': CMAKE_PREFIX_PATH=/home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface:/home/avent/Public/MyProjects/MosqiBot/Host/install/qt_ui_test:/home/avent/Public/MyProjects/MosqiBot/Host/install/qt_ui:/home/avent/Public/MyProjects/MosqiBot/Host/install/camera_client:/home/avent/Public/MyProjects/MosqiBot/Host/install/camera_client_noui:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/qt_ui_test:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/camera_client_noui:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/camera_client:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/my_interface:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/qtui:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/qt_ui:/home/avent/Public/MyProjects/MosqiBot/Host/install/arduino_pkg:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/arduino_pkg:/opt/ros/humble /usr/bin/cmake --install /home/avent/Public/MyProjects/MosqiBot/Host/build/camera_client_noui
+[11.466s] -- Install configuration: "Release"
+[11.466s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/camera_client_noui/lib/camera_client_noui/camera_client_noui
+[11.466s] -- Set runtime path of "/home/avent/Public/MyProjects/MosqiBot/Host/install/camera_client_noui/lib/camera_client_noui/camera_client_noui" to ""
+[11.466s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/camera_client_noui/share/camera_client_noui/launch
+[11.466s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/camera_client_noui/share/camera_client_noui/launch/mosqibot.launch.py
+[11.466s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/camera_client_noui/share/camera_client_noui/launch/v4l2.launch.py
+[11.466s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/camera_client_noui/share/camera_client_noui/param
+[11.467s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/camera_client_noui/share/camera_client_noui/param/camera_info.yaml
+[11.467s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/camera_client_noui/share/camera_client_noui/param/camera_setting.yaml
+[11.467s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/camera_client_noui/share/ament_index/resource_index/package_run_dependencies/camera_client_noui
+[11.467s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/camera_client_noui/share/ament_index/resource_index/parent_prefix_path/camera_client_noui
+[11.467s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/camera_client_noui/share/camera_client_noui/environment/ament_prefix_path.sh
+[11.467s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/camera_client_noui/share/camera_client_noui/environment/ament_prefix_path.dsv
+[11.467s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/camera_client_noui/share/camera_client_noui/environment/path.sh
+[11.467s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/camera_client_noui/share/camera_client_noui/environment/path.dsv
+[11.467s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/camera_client_noui/share/camera_client_noui/local_setup.bash
+[11.467s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/camera_client_noui/share/camera_client_noui/local_setup.sh
+[11.467s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/camera_client_noui/share/camera_client_noui/local_setup.zsh
+[11.467s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/camera_client_noui/share/camera_client_noui/local_setup.dsv
+[11.467s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/camera_client_noui/share/camera_client_noui/package.dsv
+[11.467s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/camera_client_noui/share/ament_index/resource_index/packages/camera_client_noui
+[11.467s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/camera_client_noui/share/camera_client_noui/cmake/camera_client_nouiConfig.cmake
+[11.467s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/camera_client_noui/share/camera_client_noui/cmake/camera_client_nouiConfig-version.cmake
+[11.467s] -- Installing: /home/avent/Public/MyProjects/MosqiBot/Host/install/camera_client_noui/share/camera_client_noui/package.xml
+[11.469s] Invoked command in '/home/avent/Public/MyProjects/MosqiBot/Host/build/camera_client_noui' returned '0': CMAKE_PREFIX_PATH=/home/avent/Public/MyProjects/MosqiBot/Host/install/my_interface:/home/avent/Public/MyProjects/MosqiBot/Host/install/qt_ui_test:/home/avent/Public/MyProjects/MosqiBot/Host/install/qt_ui:/home/avent/Public/MyProjects/MosqiBot/Host/install/camera_client:/home/avent/Public/MyProjects/MosqiBot/Host/install/camera_client_noui:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/qt_ui_test:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/camera_client_noui:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/camera_client:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/my_interface:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/qtui:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/qt_ui:/home/avent/Public/MyProjects/MosqiBot/Host/install/arduino_pkg:/home/avent/Public/MyProjects/MosqiBot/ROS2-QT/install/arduino_pkg:/opt/ros/humble /usr/bin/cmake --install /home/avent/Public/MyProjects/MosqiBot/Host/build/camera_client_noui
