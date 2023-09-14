@@ -16,9 +16,10 @@
 - `Shell`：Shell 脚本文件；
 - `test`：测试上位机软件的某些功能。
 
-一段测试视频：
+总体测试效果如下：
 
-<video src="README.assets/test.mp4"></video>
+![test](README.assets/test.gif)
+
 
 
 
