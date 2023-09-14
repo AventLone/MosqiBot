@@ -20,10 +20,17 @@
 
 
 
-
 ## 算法流程图
 
+GitHub Light 主题下：
+
 <img src="README.assets/001.svg" alt="001"  />
+
+GitHub Dark 主题下：
+
+![algorithm](README.assets/algorithm.svg)
+
+
 
 ## Qt 用户界面
 
