@@ -1,6 +1,0 @@
-# 通信信息
-uint8 command
-float32[2] point_xy
----
-# 下位机是否完成任务
-bool flag

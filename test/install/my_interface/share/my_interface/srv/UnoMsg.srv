@@ -1,5 +1,0 @@
-# 通信信息
-bool shutdown
----
-# 下位机是否完成任务
-bool done
