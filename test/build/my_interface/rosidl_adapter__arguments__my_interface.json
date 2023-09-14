@@ -1,0 +1,7 @@
+{
+  "package_name": "my_interface",
+  "non_idl_tuples": [
+    "/home/avent/Public/MyProjects/MosqiBot/ROS2/src/my_interface:srv/MegaMsg.srv",
+    "/home/avent/Public/MyProjects/MosqiBot/ROS2/src/my_interface:srv/CleanUp.srv"
+  ]
+}

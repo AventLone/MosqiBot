@@ -1,0 +1,19 @@
+// generated from rosidl_adapter/resource/srv.idl.em
+// with input from my_interface/srv/UnoMsg.srv
+// generated code does not contain a copyright notice
+
+
+module my_interface {
+  module srv {
+    @verbatim (language="comment", text=
+      "通信信息")
+    struct UnoMsg_Request {
+      boolean shutdown;
+    };
+    @verbatim (language="comment", text=
+      "下位机是否完成任务")
+    struct UnoMsg_Response {
+      boolean done;
+    };
+  };
+};

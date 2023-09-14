@@ -1,0 +1,4 @@
+[console_scripts]
+mega_node = arduino_pkg.mega_node:main
+uno_node = arduino_pkg.uno_node:main
+
