@@ -2,6 +2,7 @@
 .vscode/
 build/
 install/
+model/
 log/
 
 *.workspace
