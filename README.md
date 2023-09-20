@@ -8,6 +8,8 @@
 
 ## 文件夹注释
 
+<img src="README.assets/File_Tree.svg" alt="File_Tree"  />
+
 - `Embedded`：下位机软件；
 - `Host`：上位机软件，包括 ROS2 程序和 Qt 图形界面程序；
 - `Matlab`：Matlab 脚本文件，用于计算某些参数；
@@ -44,19 +46,19 @@ GitHub Dark 主题下：
 
 通过控制用于对焦（Focus）的微型步进电机，可以将焦平面移动到靶虫不同的身体部位。
 
-<img src="README.assets/IMG_0540.jpeg" alt="IMG_0540" style="zoom: 33%;" />
+<img src="README.assets/camera.jpeg" alt="camera" style="zoom: 33%;" />
 
 这里由焦平面从上到下，依次拍取 3 张照片：
 
-<img src="README.assets/001.png" alt="001" style="zoom: 33%;" />
+![001](README.assets/001.jpg)
 
-<img src="README.assets/002.png" alt="002" style="zoom: 33%;" />
+![002](README.assets/002.jpg)
 
-<img src="README.assets/003.png" alt="003" style="zoom: 33%;" />
+![003](README.assets/003.jpg)
 
 景深融合结果如下：
 
-<img src="README.assets/result.png" alt="result" style="zoom:33%;" />
+![006](README.assets/006.jpg)
 
 
 
@@ -64,7 +66,7 @@ GitHub Dark 主题下：
 
 推理效果如下
 
-<img src="README.assets/image-20230914102737072.png" alt="image-20230914102737072" style="zoom:50%;" />
+<img src="README.assets/detect.png" alt="detect" style="zoom:50%;" />
 
 
 
