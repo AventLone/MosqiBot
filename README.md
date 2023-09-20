@@ -28,25 +28,19 @@ GitHub Light 主题下：
 
 <img src="README.assets/001.svg" alt="001"  />
 
-GitHub Dark 主题下：
-
-![algorithm](README.assets/algorithm.svg)
-
 
 
 ## Qt 用户界面
 
+<img src="README.assets/IMG_3454.PNG" alt="IMG_3454"  />
 
-
-<img src="README.assets/IMG_3454.PNG" alt="IMG_3454" style="zoom: 33%;" />
-
-<img src="README.assets/IMG_3455.PNG" alt="IMG_3455" style="zoom:33%;" />
+<img src="README.assets/IMG_3455.PNG" alt="IMG_3455"  />
 
 ## 景深融合
 
 通过控制用于对焦（Focus）的微型步进电机，可以将焦平面移动到靶虫不同的身体部位。
 
-<img src="README.assets/camera.jpeg" alt="camera" style="zoom: 33%;" />
+<img src="README.assets/camera.jpeg" alt="camera"  />
 
 这里由焦平面从上到下，依次拍取 3 张照片：
 
@@ -66,7 +60,7 @@ GitHub Dark 主题下：
 
 推理效果如下
 
-<img src="README.assets/detect.png" alt="detect" style="zoom:50%;" />
+<img src="README.assets/detect.png" alt="detect"  />
 
 
 
