@@ -1,0 +1,6 @@
+<RCC>
+    <qresource prefix="/">
+        <file>images/led.ico</file>
+        <file>images/robotic-arm.png</file>
+    </qresource>
+</RCC>

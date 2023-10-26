@@ -1,9 +1,0 @@
-<RCC>
-    <qresource prefix="/">
-        <file>led.ico</file>
-        <file>robotic-arm.png</file>
-        <file>mosqibot.sh</file>
-        <file>end_process.sh</file>
-        <file>program_name.png</file>
-    </qresource>
-</RCC>
