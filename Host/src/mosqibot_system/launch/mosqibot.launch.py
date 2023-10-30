@@ -25,7 +25,8 @@ def generate_launch_description():
     )
     node_mosqibot_system = Node(
         package="mosqibot_system", executable="mosqibot_system",
-        emulate_tty=True, output="screen"
+        emulate_tty=True, output="screen",
+        parameters=[{'MosquitoTargetNum': 3}]
     )
     node_qtUi = Node(package="mosqibot_ui_test", executable="MosqiBot")
 

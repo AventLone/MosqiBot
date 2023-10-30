@@ -50,15 +50,15 @@ Projecting::Projecting(const std::string& setting_file)
     mLine4[1] = cv::Point(mImgWidth / 2 + mCircleRadius - 1, mImgHeight / 2 - 1);
 
     std::string display_mode = std::get<std::string>(param_values[7]);
-    if (display_mode == "show_index")
+    if (display_mode == "ShowIndex")
     {
         mDispalyMode = SHOW_INDEX;
     }
-    else if (display_mode == "show_area")
+    else if (display_mode == "ShowArea")
     {
         mDispalyMode = SHOW_AREA;
     }
-    else if (display_mode == "show_nothing")
+    else if (display_mode == "ShowNothing")
     {
         mDispalyMode = SHOW_NOTHING;
     }

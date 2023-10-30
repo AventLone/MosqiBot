@@ -8,6 +8,9 @@ Task::Task() : mGroupIndex(0)
 {
     mNode = std::make_shared<RosClient>("ros_client");
 
+    mNode->declare_parameter("MosquitoTargetNum", 5);
+    mNode->get_parameter("MosquitoTargetNum", mMosquitoTargetNum);
+
     /*************** Create picture folder ******************/
     std::filesystem::path dir_path = "/home/avent/Desktop/MosqiBot_Pictures";
     uint16_t count = 1;
@@ -23,11 +26,14 @@ Task::Task() : mGroupIndex(0)
         }
     }
     mPictureDir = dir_path.string() + "/Task_" + std::to_string(count);
-    std::filesystem::create_directory(mPictureDir);
+    if (!std::filesystem::create_directory(mPictureDir))
+    {
+        RCLCPP_FATAL(mNode->get_logger(), "Failed to create a task directory!");
+        std::exit(EXIT_FAILURE);
+    }
     /********************************************************/
 
     std::string pkg_path = ament_index_cpp::get_package_share_directory("mosqibot_system");
-
     mYoloer = std::make_unique<tensorRT::Yolo>(pkg_path + "/config/settings/config.yaml",
                                                pkg_path + "/model/mosquito_yolov5_v3.trt",
                                                pkg_path + "/model/mosquito_classes.txt");
@@ -42,9 +48,9 @@ Task::~Task()
 {
     for (uint8_t i = 0; i < 2; ++i)
     {
-        if (mMyThreads[i].joinable())
+        if (mThreads[i].joinable())
         {
-            mMyThreads[i].join();
+            mThreads[i].join();
         }
     }
     rclcpp::shutdown();
@@ -69,39 +75,51 @@ void Task::task_sendMsg()
         /*** 1.Move the camera to the right middel place ***/
         sendAndWait(command::Mega::GLOB_CAMERA);
         sendAndWait(command::Mega::READY_CAMERA);               // Make camera on the top center position.
-        std::this_thread::sleep_for(std::chrono::seconds(8));   // Waiting for camera prepared
+        std::this_thread::sleep_for(std::chrono::seconds(8));   // Waiting untill camera prepared
         /***************************************************/
 
-        /*** 2.Scatter the mosquitoes with shaking/vibration ***/
+        /*** 2.Separate the mosquitoes by shaking/vibration ***/
         vibratePlate();
         /*******************************************************/
 
         /*** 3.Take pictures on mosquitos one by one. ***/
         auto points = mNode->locateTarget();
-        std::string picture_path = mPictureDir + "/Group_" + std::to_string(++mGroupIndex);
-        if (points.size() >= mTargetNum)
-        {
-            uint8_t picture_index = 0;
-            std::string picture_path = mPictureDir + "/Group_" + std::to_string(++mGroupIndex);
-            std::filesystem::create_directory(picture_path + "/Raw");
 
-            sendAndWait(command::Mega::POWER_ON);
-            sendAndWait(command::Mega::Z);
-            std::array<command::Mega, 3> commands = {
-                command::Mega::LOCAL_CAMERA_1, command::Mega::LOCAL_CAMERA_2, command::Mega::LOCAL_CAMERA_3};
-            for (auto cmd : commands)
-            {
-                sendAndWait(cmd);
-                for (const auto& coordinate : points)
-                {
-                    sendAndWait(coordinate);
-                    std::this_thread::sleep_for(std::chrono::milliseconds(800));
-                    cv::imwrite(picture_path + "/Raw/" + std::to_string(++picture_index) + ".jpg", mNode->img);
-                }
-            }
-            sendAndWait(command::Mega::FLIP);
-            sendAndWait(command::Mega::POWER_OFF);
+        if (points.size() < mMosquitoTargetNum) continue;
+
+        uint8_t picture_index = 0;
+        std::string picture_path = mPictureDir + "/Group_" + std::to_string(++mGroupIndex);
+        if (!std::filesystem::create_directory(picture_path))
+        {
+            RCLCPP_FATAL(mNode->get_logger(), "Failed to create a directory storing crude pictures!");
+            std::exit(EXIT_FAILURE);
         }
+
+        /*** Create a directory for crude pictures which means pictures unprocessed. ***/
+        std::string crude_picture_path = picture_path + "/Crude";
+        if (!std::filesystem::create_directory(crude_picture_path))
+        {
+            RCLCPP_FATAL(mNode->get_logger(), "Failed to create a directory storing crude pictures!");
+            std::exit(EXIT_FAILURE);
+        }
+
+        sendAndWait(command::Mega::POWER_ON);
+        sendAndWait(command::Mega::Z);
+        std::array<command::Mega, 3> commands = {
+            command::Mega::LOCAL_CAMERA_1, command::Mega::LOCAL_CAMERA_2, command::Mega::LOCAL_CAMERA_3};
+        for (auto cmd : commands)
+        {
+            sendAndWait(cmd);
+            for (const auto& coordinate : points)
+            {
+                sendAndWait(coordinate);
+                std::this_thread::sleep_for(std::chrono::milliseconds(800));
+                cv::imwrite(crude_picture_path + "/" + std::to_string(++picture_index) + ".jpg", mNode->img);
+            }
+        }
+        sendAndWait(command::Mega::FLIP);
+        sendAndWait(command::Mega::POWER_OFF);
+
         /**********************************************************/
 
         /*** 4.Init the device. ***/
@@ -109,7 +127,7 @@ void Task::task_sendMsg()
         sendAndWait(command::Mega::INIT_CAMERA);
         /*****************************/
 
-        /*** Process the images ***/
+        /*** Process the pictures ***/
         focusStackImgs(picture_path);
         recognizeImgs(picture_path);
 
@@ -149,8 +167,8 @@ void Task::cmdSubCallback(const std_msgs::msg::Byte::ConstPtr msg)
 
 void Task::start()
 {
-    mMyThreads[0] = std::thread(&Task::task_sendMsg, this);
-    mMyThreads[1] = std::thread(&Task::task_spinNode, this);
+    mThreads[0] = std::thread(&Task::task_sendMsg, this);
+    mThreads[1] = std::thread(&Task::task_spinNode, this);
 }
 
 void Task::sendAndWait(command::Mega command)
@@ -205,13 +223,18 @@ void Task::vibratePlate()
 void Task::focusStackImgs(const std::string& path) const
 {
     /*** Create directories ***/
-    std::filesystem::create_directory(path + "/FocusStacked");
+    if (!std::filesystem::create_directory(path + "/FocusStacked"))
+    {
+        RCLCPP_ERROR(mNode->get_logger(), "Failed to create directory 'FocusStacked' !");
+        return;
+    }
 
-    std::filesystem::path p(path + "/Raw");
+    std::filesystem::path p(path + "/Crude");
 
     if (!std::filesystem::exists(p) || !std::filesystem::is_directory(p))
     {
-        std::cerr << "Error: " << p << " is not a directory" << std::endl;
+        // std::cerr << "Error: " << p << " is not a directory" << std::endl;
+        RCLCPP_ERROR(mNode->get_logger(), "Directory 'Crude' didn't exit!");
         return;
     }
 
@@ -226,32 +249,39 @@ void Task::focusStackImgs(const std::string& path) const
     }
     if (img_paths.empty())
     {
-        std::cerr << "Error: There is no image file under " << path + "/Raw"
-                  << " !" << std::endl;
+        // std::cerr << "Error: There is no image file under " << path + "/Raw"
+        //           << " !" << std::endl;
+        RCLCPP_ERROR(mNode->get_logger(), "There is no pictures under directory 'Crude' !");
         return;
     }
-    for (int i = 0; i < img_paths.size(); i += 3)
+    int step = img_paths.size() / 3;
+    for (int i = 0; i < step; ++i)
     {
         std::vector<cv::Mat> imgs;
         imgs.reserve(3);
         cv::Mat tmp;
-        for (int j = i; j < i + 3; ++j)
+        for (int j = i; j < img_paths.size(); j += step)
         {
             imgs.emplace_back(cv::imread(img_paths[j]));
         }
         mFocusStacker->fuse(imgs, tmp);
-        cv::imwrite(path + "/FocusStacked/" + std::to_string(i / 3) + ".jpg", tmp);
+        cv::imwrite(path + "/FocusStacked/" + std::to_string(i) + ".jpg", tmp);
     }
 }
 
 void Task::recognizeImgs(const std::string& path) const
 {
-    std::filesystem::create_directory(path + "/Detected");
+    if (!std::filesystem::create_directory(path + "/Recognized"))
+    {
+        RCLCPP_ERROR(mNode->get_logger(), "Failed to create directory 'Recognized'!");
+        return;
+    }
     std::filesystem::path p(path + "/FocusStacked");
 
     if (!std::filesystem::exists(p) || !std::filesystem::is_directory(p))
     {
-        std::cerr << "Error: " << p << " is not a directory" << std::endl;
+        // std::cerr << "Error: " << p << " is not a directory" << std::endl;
+        RCLCPP_ERROR_STREAM(mNode->get_logger(), "Error: " << p << " is not a directory");
         // exit(EXIT_FAILURE);
         return;
     }
@@ -267,8 +297,8 @@ void Task::recognizeImgs(const std::string& path) const
     }
     if (img_paths.empty())
     {
-        std::cerr << "Error: There is no image file under " << path + "/Raw"
-                  << " !" << std::endl;
+        RCLCPP_ERROR_STREAM(mNode->get_logger(), "Error: There is no image file under " << path + "/FocusStacked !");
+        // std::cerr << "Error: There is no image file under " << path + "/FocusStacked !" << std::endl;
         return;
     }
 
@@ -288,4 +318,5 @@ void Task::task_spinNode()
 {
     rclcpp::spin(mNode);
 }
+
 }   // namespace MosqiBot

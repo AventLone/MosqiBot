@@ -13,11 +13,12 @@ Yolo::Yolo(const std::string& setting_file, const std::string& net_file, const s
         mClasses.push_back(line);
     }
     std::string mode = avent::parseSettings<std::string>(setting_file, "OutputMode");
-    if (mode == "whole_mode")
+
+    if (mode == "WholeMode")
     {
         personalizedPostprocess = &Yolo::getWholeWithMarks;
     }
-    else if (mode == "separate_mode")
+    else if (mode == "SeparateMode")
     {
         personalizedPostprocess = &Yolo::getSeparateTarget;
     }

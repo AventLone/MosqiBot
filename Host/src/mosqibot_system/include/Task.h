@@ -29,13 +29,13 @@ public:
 
 private:
     /*** Parameters ***/
-    const unsigned char mTargetNum{2};
+    uint8_t mMosquitoTargetNum;
 
     std::string mPictureDir;
     uint16_t mGroupIndex;
 
     /*** Multi-Threaded ***/
-    std::thread mMyThreads[2];
+    std::thread mThreads[2];
     std::mutex mImgMutex;
     std::atomic<bool> mStartShootFlag{false};
 
@@ -58,7 +58,7 @@ private:
     void recognizeImgs(const std::string& path) const;
 
     /*** Tasks in threads ***/
-    void task_sendMsg();
-    void task_spinNode();
+    void task_sendMsg();    // Responsible for communicating with MCU
+    void task_spinNode();   // The thread running ros node
 };
 }   // namespace MosqiBot

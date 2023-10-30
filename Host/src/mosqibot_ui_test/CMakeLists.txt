@@ -9,8 +9,8 @@ set(CMAKE_AUTOUIC ON)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
+# set(CMAKE_CXX_STANDARD 17)
+# set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 # find Qt dependencies
 find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Widgets)
@@ -46,6 +46,7 @@ add_executable(${NODE_NAME}
     ${SRC_FILES}
 )
 
+target_compile_features(${NODE_NAME} PUBLIC c_std_99 cxx_std_17) # Require C99 and C++17
 ament_target_dependencies(${NODE_NAME} ${DEPENDENT_PACKAGES})
 target_link_libraries(${NODE_NAME} Qt${QT_VERSION_MAJOR}::Widgets)
 
