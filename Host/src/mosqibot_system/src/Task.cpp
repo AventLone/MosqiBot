@@ -119,7 +119,6 @@ void Task::task_sendMsg()
         }
         sendAndWait(command::Mega::FLIP);
         sendAndWait(command::Mega::POWER_OFF);
-
         /**********************************************************/
 
         /*** 4.Init the device. ***/
