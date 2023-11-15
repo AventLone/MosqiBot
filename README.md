@@ -1,9 +1,3 @@
-> 作者简介：
->
-> 北京化工大学，陈国昊
->
-> 邮箱：aventlone@outlook.com
-
 # 昆虫信息采集系统
 
 ## 文件夹注释
@@ -32,27 +26,27 @@ GitHub Light 主题下：
 
 ## Qt 用户界面
 
-<img src="README.assets/IMG_3454.PNG" alt="IMG_3454" style="zoom:50%;" />
+<img src="README.assets/IMG_3454.PNG" width="860" height="600" alt="IMG_3454" />
 
-<img src="README.assets/IMG_3455.PNG" alt="IMG_3455" style="zoom: 50%;" />
+<img src="README.assets/IMG_3455.PNG" width="860" height="600" alt="IMG_3455" />
 
 ## 景深融合
 
 通过控制用于对焦（Focus）的微型步进电机，可以将焦平面移动到靶虫不同的身体部位。
 
-<img src="README.assets/camera.jpeg" alt="camera" style="zoom:50%;" />
+<img src="README.assets/camera.jpeg" width="600" height="600" alt="camera"/>
 
 这里由焦平面从上到下，依次拍取 3 张照片：
 
-<img src="README.assets/001.jpg" alt="001" style="zoom: 80%;" />
+<img src="README.assets/001.jpg" width="600" height="460" alt="001" />
 
-<img src="README.assets/002.jpg" alt="002" style="zoom:80%;" />
+<img src="README.assets/002.jpg" width="600" height="460" alt="002" />
 
-<img src="README.assets/003.jpg" alt="003" style="zoom:80%;" />
+<img src="README.assets/003.jpg" width="600" height="460" alt="003" />
 
 景深融合结果如下：
 
-<img src="README.assets/006.jpg" alt="006" style="zoom:80%;" />
+<img src="README.assets/006.jpg" width="600" height="460" alt="006" />
 
 
 
@@ -60,7 +54,7 @@ GitHub Light 主题下：
 
 推理效果如下
 
-<img src="README.assets/detect.png" alt="detect" style="zoom:67%;" />
+<img src="README.assets/detect.png" width="800" height="600" alt="detect" />
 
 
 
