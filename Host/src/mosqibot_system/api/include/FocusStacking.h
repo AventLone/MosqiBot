@@ -51,12 +51,14 @@ private:
      * @return A std::vector that stores a group of images that has been aligned.
      ********************************************************************************/
     std::vector<cv::Mat> alignImgs(const std::vector<cv::Mat>& imgs);
+
     /********************************************************************************
      * @brief Extract the relatively sharpest part of the image.
      * @param img A cv::Mat.
      * @return Value of your parameter.
      ********************************************************************************/
     cv::Mat doLap(const cv::Mat& img) const;
+
     /********************************************************************************
      * @brief Parse a setting file, yaml, to get value of the parameter.
      * @param setting_file Path to the setting file.

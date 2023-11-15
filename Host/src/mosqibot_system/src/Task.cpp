@@ -232,34 +232,35 @@ void Task::focusStackImgs(const std::string& path) const
 
     if (!std::filesystem::exists(p) || !std::filesystem::is_directory(p))
     {
-        // std::cerr << "Error: " << p << " is not a directory" << std::endl;
         RCLCPP_ERROR(mNode->get_logger(), "Directory 'Crude' didn't exit!");
         return;
     }
 
-    std::vector<std::string> img_paths;
+    /***
+     * Store image paths using std::map to sort in order
+     * as std::filesystem::directory_iterator read file paths randomly
+     ***/
+    std::map<int, std::string> img_paths;
     for (const auto& entry : std::filesystem::directory_iterator(p))
     {
         if (entry.path().extension() == ".jpg" || entry.path().extension() == ".jpeg" ||
             entry.path().extension() == ".png")
         {
-            img_paths.push_back(entry.path().string());
+            img_paths[std::stoi(entry.path().stem())] = entry.path();
         }
     }
     if (img_paths.empty())
     {
-        // std::cerr << "Error: There is no image file under " << path + "/Raw"
-        //           << " !" << std::endl;
         RCLCPP_ERROR(mNode->get_logger(), "There is no pictures under directory 'Crude' !");
         return;
     }
     int step = img_paths.size() / 3;
-    for (int i = 0; i < step; ++i)
+    for (int i = 1; i <= step; ++i)
     {
         std::vector<cv::Mat> imgs;
         imgs.reserve(3);
         cv::Mat tmp;
-        for (int j = i; j < img_paths.size(); j += step)
+        for (int j = i; j <= img_paths.size(); j += step)
         {
             imgs.emplace_back(cv::imread(img_paths[j]));
         }

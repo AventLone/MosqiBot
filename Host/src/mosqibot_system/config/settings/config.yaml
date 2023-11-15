@@ -11,9 +11,9 @@ CameraMatrix:
   rows: 3
   cols: 3
   dt: d
-  data: [ 2392.63157,        0., 863.19968, 
-                  0., 2381.9008, 797.51009,
-                  0.,        0.,       1.]
+  data: [2392.63157,        0., 863.19968,
+                 0., 2381.9008, 797.51009,
+                 0.,        0.,        1.]
 DistortionCoefficients:
   rows: 1
   cols: 5
@@ -51,7 +51,7 @@ DisplayMode: ShowIndex
 
 
 #-------------------------------------------------------------------------------------
-# tensorRT Net parameters
+# TensorRT Net parameters
 #-------------------------------------------------------------------------------------
 InputTensorName: images
 OutputTensorName: output0

@@ -1,5 +1,5 @@
 #include "FocusStacking.h"
-#include "parseSetting.h"
+#include "MacroLog.h"
 #include <filesystem>
 
 namespace avent
@@ -11,7 +11,7 @@ void FocusStacking::fuse(const std::string& dir_path, cv::Mat& dst)
 
     if (!std::filesystem::exists(p) || !std::filesystem::is_directory(p))
     {
-        exitWithInfo(static_cast<std::string>(p) + " is not a directory!");
+        THROW_ERROR(p.string() + " is not a directory!");
     }
 
     std::vector<std::string> img_paths;
@@ -25,7 +25,7 @@ void FocusStacking::fuse(const std::string& dir_path, cv::Mat& dst)
     }
     if (img_paths.empty())
     {
-        exitWithInfo("There is no image file under " + dir_path + "!");
+        THROW_ERROR("There is no image file under " + dir_path + "!");
     }
 
     std::vector<cv::Mat> imgs;
@@ -36,8 +36,7 @@ void FocusStacking::fuse(const std::string& dir_path, cv::Mat& dst)
     }
     if (imgs[0].empty())
     {
-        std::cerr << "Error: " << img_paths[0] << " is empty" << std::endl;
-        exit(EXIT_FAILURE);
+        THROW_ERROR("Error: " + img_paths[0] + " is empty");
     }
 
     focusStack(alignImgs(imgs), dst);
@@ -45,13 +44,17 @@ void FocusStacking::fuse(const std::string& dir_path, cv::Mat& dst)
 
 std::vector<cv::Mat> FocusStacking::alignImgs(const std::vector<cv::Mat>& imgs)
 {
+    if (imgs.empty() || imgs[0].empty())
+    {
+        THROW_ERROR("Image vector is empty!");
+    }
     std::vector<cv::Mat> aligned_imgs;
     aligned_imgs.push_back(imgs[0]);
 
     int w = imgs[0].cols, h = imgs[0].rows;
 
     cv::Mat refe_gray;
-    cvtColor(imgs[0], refe_gray, cv::COLOR_BGR2GRAY);
+    cv::cvtColor(imgs[0], refe_gray, cv::COLOR_BGR2GRAY);
 
     /*** Declare key point and its descriptors ***/
     std::vector<cv::KeyPoint> keypoints_refe;
@@ -64,11 +67,11 @@ std::vector<cv::Mat> FocusStacking::alignImgs(const std::vector<cv::Mat>& imgs)
         int w_i = imgs[i].cols, h_i = imgs[i].rows;
         if (w_i != w || h_i != h)
         {
-            exitWithInfo("The sizes of these images don't match!");
+            THROW_ERROR("The sizes of these images don't match!");
         }
 
         cv::Mat imgGray;
-        cvtColor(imgs[i], imgGray, cv::COLOR_BGR2BGRA);
+        cv::cvtColor(imgs[i], imgGray, cv::COLOR_BGR2BGRA);
 
         std::vector<cv::KeyPoint> keypoints;
         cv::Mat descriptors;
@@ -102,7 +105,17 @@ std::vector<cv::Mat> FocusStacking::alignImgs(const std::vector<cv::Mat>& imgs)
             points_refe.push_back(keypoints_refe[match.queryIdx].pt);
         }
 
-        cv::Mat homo = cv::findHomography(points, points_refe, cv::RANSAC, 2.0);
+        cv::Mat homo;
+        try
+        {
+            homo = cv::findHomography(points, points_refe, cv::RANSAC, 2.0);
+        }
+        catch (std::exception& e)
+        {
+            std::cerr << e.what();
+            return imgs;
+        }
+
         cv::Mat outcome;
         cv::warpPerspective(imgs[i], outcome, homo, imgs[i].size(), cv::INTER_LINEAR);
         aligned_imgs.push_back(outcome);
@@ -127,7 +140,7 @@ void FocusStacking::focusStack(const std::vector<cv::Mat>& aligned_imgs, cv::Mat
     cv::Mat img_gray;
     for (const auto& img : aligned_imgs)
     {
-        cvtColor(img, img_gray, cv::COLOR_BGR2GRAY);
+        cv::cvtColor(img, img_gray, cv::COLOR_BGR2GRAY);
         laps.push_back(doLap(img_gray));
     }
 
@@ -139,7 +152,7 @@ void FocusStacking::focusStack(const std::vector<cv::Mat>& aligned_imgs, cv::Mat
             auto* pixl = lap.ptr<float>(i);
             for (int j = 0; j < w; ++j)
             {
-                pixl[j] = fabs(pixl[j]);   // 浮点型绝对值: fabs()
+                pixl[j] = std::fabs(pixl[j]);   // 浮点型绝对值: fabs()
             }
         }
     }
