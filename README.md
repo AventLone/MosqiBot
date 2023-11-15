@@ -18,9 +18,7 @@
 
 ## 2 算法流程图
 
-GitHub Light 主题下：
-
-![bala](README.assets/bala.svg)
+![algorithm](README.assets/algorithm.svg)
 
 
 
