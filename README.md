@@ -1,6 +1,6 @@
 # 昆虫信息采集系统
 
-## 文件夹注释
+## 1 文件夹注释
 
 <img src="README.assets/File_Tree.svg" alt="File_Tree"  />
 
@@ -16,21 +16,21 @@
 
 
 
-## 算法流程图
+## 2 算法流程图
 
 GitHub Light 主题下：
 
-<img src="README.assets/001.svg" alt="001"  />
+![bala](README.assets/bala.svg)
 
 
 
-## Qt 用户界面
+## 3 Qt 用户界面
 
 <img src="README.assets/IMG_3454.PNG" width="860" height="600" alt="IMG_3454" />
 
 <img src="README.assets/IMG_3455.PNG" width="860" height="600" alt="IMG_3455" />
 
-## 景深融合
+## 4 景深融合
 
 通过控制用于对焦（Focus）的微型步进电机，可以将焦平面移动到靶虫不同的身体部位。
 
@@ -50,7 +50,7 @@ GitHub Light 主题下：
 
 
 
-## tensorRT 部署 Yolov5 模型
+## 5 tensorRT 部署 Yolov5 模型
 
 推理效果如下
 
