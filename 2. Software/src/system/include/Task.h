@@ -43,7 +43,7 @@ private:
     std::shared_ptr<RosClient> mNode;
     rclcpp::Subscription<std_msgs::msg::Byte>::SharedPtr mCommandSub;   // Receive the commands from GUI
     std::unique_ptr<avent::FocusStacking> mFocusStacker{std::make_unique<avent::FocusStacking>()};
-    std::unique_ptr<tensorRT::Yolo> mYoloer;
+    std::unique_ptr<trt::Yolo> mYoloer;
 
 
 private:
@@ -54,8 +54,8 @@ private:
 
     void vibratePlate();
 
-    void focusStackImgs(const std::string& path) const;
-    void recognizeImgs(const std::string& path) const;
+    void focusStackImgs(const std::string& file_path) const;
+    void recognizeImgs(const std::string& file_path) const;
 
     /*** Tasks in threads ***/
     void task_sendMsg();    // Responsible for communicating with MCU

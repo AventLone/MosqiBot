@@ -10,7 +10,7 @@
 #include <opencv2/opencv.hpp>
 #include <fstream>
 
-namespace tensorRT
+namespace trt
 {
 struct Deleter
 {
@@ -74,4 +74,4 @@ protected:
 
     virtual void postprocess(const cv::Mat& src, std::vector<cv::Mat>& dst) = 0;
 };
-}   // namespace tensorRT
+}   // namespace trt

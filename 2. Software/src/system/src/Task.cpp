@@ -11,7 +11,7 @@ Task::Task() : mGroupIndex(0)
     mNode->declare_parameter("MosquitoTargetNum", 5);
     mNode->get_parameter("MosquitoTargetNum", mMosquitoTargetNum);
 
-    /*************** Create picture folder ******************/
+    /* Create picture folder */
     std::filesystem::path dir_path = "/home/avent/Desktop/MosqiBot_Pictures";
     uint16_t count = 1;
     if (!std::filesystem::is_directory(dir_path))
@@ -31,12 +31,11 @@ Task::Task() : mGroupIndex(0)
         RCLCPP_FATAL(mNode->get_logger(), "Failed to create a task directory!");
         std::exit(EXIT_FAILURE);
     }
-    /********************************************************/
 
     std::string pkg_path = ament_index_cpp::get_package_share_directory("mosqibot_system");
-    mYoloer = std::make_unique<tensorRT::Yolo>(pkg_path + "/config/settings/config.yaml",
-                                               pkg_path + "/model/mosquito_yolov5_v3.trt",
-                                               pkg_path + "/model/mosquito_classes.txt");
+    mYoloer = std::make_unique<trt::Yolo>(pkg_path + "/config/settings/config.yaml",
+                                          pkg_path + "/model/mosquito_yolov5_v3.trt",
+                                          pkg_path + "/model/mosquito_classes.txt");
 
     mCommandSub =
         mNode->create_subscription<std_msgs::msg::Byte>("MosqiBot/command_from_GUI",
@@ -219,16 +218,16 @@ void Task::vibratePlate()
     vibratePlate();
 }
 
-void Task::focusStackImgs(const std::string& path) const
+void Task::focusStackImgs(const std::string& file_path) const
 {
     /*** Create directories ***/
-    if (!std::filesystem::create_directory(path + "/FocusStacked"))
+    if (!std::filesystem::create_directory(file_path + "/FocusStacked"))
     {
         RCLCPP_ERROR(mNode->get_logger(), "Failed to create directory 'FocusStacked' !");
         return;
     }
 
-    std::filesystem::path p(path + "/Crude");
+    std::filesystem::path p(file_path + "/Crude");
 
     if (!std::filesystem::exists(p) || !std::filesystem::is_directory(p))
     {
@@ -265,18 +264,18 @@ void Task::focusStackImgs(const std::string& path) const
             imgs.emplace_back(cv::imread(img_paths[j]));
         }
         mFocusStacker->fuse(imgs, tmp);
-        cv::imwrite(path + "/FocusStacked/" + std::to_string(i) + ".jpg", tmp);
+        cv::imwrite(file_path + "/FocusStacked/" + std::to_string(i) + ".jpg", tmp);
     }
 }
 
-void Task::recognizeImgs(const std::string& path) const
+void Task::recognizeImgs(const std::string& file_path) const
 {
-    if (!std::filesystem::create_directory(path + "/Recognized"))
+    if (!std::filesystem::create_directory(file_path + "/Recognized"))
     {
         RCLCPP_ERROR(mNode->get_logger(), "Failed to create directory 'Recognized'!");
         return;
     }
-    std::filesystem::path p(path + "/FocusStacked");
+    std::filesystem::path p(file_path + "/FocusStacked");
 
     if (!std::filesystem::exists(p) || !std::filesystem::is_directory(p))
     {
@@ -297,7 +296,8 @@ void Task::recognizeImgs(const std::string& path) const
     }
     if (img_paths.empty())
     {
-        RCLCPP_ERROR_STREAM(mNode->get_logger(), "Error: There is no image file under " << path + "/FocusStacked !");
+        RCLCPP_ERROR_STREAM(mNode->get_logger(),
+                            "Error: There is no image file under " << file_path + "/FocusStacked !");
         // std::cerr << "Error: There is no image file under " << path + "/FocusStacked !" << std::endl;
         return;
     }
@@ -309,7 +309,7 @@ void Task::recognizeImgs(const std::string& path) const
         int j = 0;
         for (const cv::Mat& img : imgs)
         {
-            cv::imwrite(path + "/Detected/" + std::to_string(i) + "_" + std::to_string(++j) + ".jpg", img);
+            cv::imwrite(file_path + "/Detected/" + std::to_string(i) + "_" + std::to_string(++j) + ".jpg", img);
         }
     }
 }

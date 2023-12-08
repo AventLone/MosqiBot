@@ -5,7 +5,7 @@
  * @copyright Copyright (AventLone) 2023
  **********************************************************/
 #include "TrtNet.h"
-namespace tensorRT
+namespace trt
 {
 class Yolo : public Net
 {
@@ -36,4 +36,4 @@ private:
 
     void postprocess(const cv::Mat& src, std::vector<cv::Mat>& dst) override;
 };
-}   // namespace tensorRT
+}   // namespace trt
