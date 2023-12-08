@@ -43,8 +43,6 @@ enum class Mega : uint8_t
 
 class RosClient : public rclcpp::Node
 {
-    // using my_interface = mosqibot_srv_interface;
-
 public:
     RosClient(std::string name);
 

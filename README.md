@@ -48,7 +48,7 @@
 
 
 
-## 5 tensorRT 部署 Yolov5 模型
+## 5 TensorRT 部署 Yolov5 模型
 
 推理效果如下
 
